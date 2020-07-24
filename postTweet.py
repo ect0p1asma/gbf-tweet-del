@@ -13,11 +13,11 @@ print("内容を入力してください。")
 tweet = input('>> ')  # キーボード入力の取得
 print('*******************************************')
 
-params = {"status" : tweet}
+params = {"status": tweet}
 
 res = twitter.post(url, params=params)  # post送信
 
 if res.status_code == 200:  # 正常投稿出来た場合
     print("Success.")
 else:  # 正常投稿出来なかった場合
-    print("Failed. : %d"% res.status_code)
+    print("Failed. : %d" % res.status_code)
